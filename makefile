@@ -1,11 +1,11 @@
 CC = g++
 # CC = /usr/local/bin/g++-6
-DFLAGS = -DMPI
-CFLAGS = -w -Wall # -g
-# INCLUDE = -I$(FFTWHOME)/include
-# LDFLAGS = -lm -lfftw_mpi -lfftw3 -L$(FFTWHOME)/lib
-INCLUDE = -I/usr/local/include
-LDFLAGS = -lm -lfftw3_mpi -lfftw3 -L/usr/local/lib
+# DFLAGS = -DMPI
+CFLAGS = -w -Wall -g
+INCLUDE = -I$(FFTWHOME)/include
+LDFLAGS = -lm -lfftw3_mpi -lfftw3 -L$(FFTWHOME)/lib
+# INCLUDE = -I/usr/local/include
+# LDFLAGS = -lm -lfftw3_mpi -lfftw3 -L/usr/local/lib
 
 SRCS = main.cpp input.cpp utils.cpp series.cpp system.cpp fftw_utils.cpp \
        component.cpp

@@ -70,7 +70,7 @@ void input::output_freq_struct_t::read(std::istringstream& iss, int num_vals) {
 
 void input::Input_Reader::read_input(std::string input_file_name) {
   // See http://stackoverflow.com/questions/7868936/read-file-line-by-line
-  std::ifstream input_file(input_file_name);
+  std::ifstream input_file(input_file_name.c_str());
   std::string line;
   bool first_var = true;
   while (std::getline(input_file, line)) {

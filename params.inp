@@ -1,0 +1,9 @@
+dim 2
+
+Lx 5 6
+Nx 10 10
+Series single
+component homopoly phi 0.5 species A N 30
+
+max_iter 1000
+output_freq  energy 100 grid 500

@@ -1,0 +1,139 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A_TYPE	component.hpp	/^  enum Species_Type { NEUTRAL, A_TYPE, B_TYPE, C_TYPE, D_TYPE };$/;"	e	enum:component::Species_Type
+B_TYPE	component.hpp	/^  enum Species_Type { NEUTRAL, A_TYPE, B_TYPE, C_TYPE, D_TYPE };$/;"	e	enum:component::Species_Type
+CC	makefile	/^CC = g++$/;"	m
+CFLAGS	makefile	/^CFLAGS = -w -Wall # -g$/;"	m
+COMPONENT_HPP	component.hpp	/^#define COMPONENT_HPP$/;"	d
+C_TYPE	component.hpp	/^  enum Species_Type { NEUTRAL, A_TYPE, B_TYPE, C_TYPE, D_TYPE };$/;"	e	enum:component::Species_Type
+Component	component.hpp	/^  class Component {$/;"	c	namespace:component
+DFLAGS	makefile	/^DFLAGS = -DMPI$/;"	m
+DIM	main.cpp	/^int DIM;$/;"	v
+D_TYPE	component.hpp	/^  enum Species_Type { NEUTRAL, A_TYPE, B_TYPE, C_TYPE, D_TYPE };$/;"	e	enum:component::Species_Type
+FFTW_UTILS_HPP	fftw_utils.hpp	/^#define FFTW_UTILS_HPP$/;"	d
+FFTW_Utils	fftw_utils.hpp	/^  FFTW_Utils(input::Input_Reader *ir, System *system):$/;"	f	class:FFTW_Utils
+FFTW_Utils	fftw_utils.hpp	/^class FFTW_Utils {$/;"	c
+GLOBALS_HPP	globals.hpp	/^#define GLOBALS_HPP$/;"	d
+Homopolymer	component.hpp	/^    Homopolymer(Species_Type species_type, int _N) : N(_N) {$/;"	f	class:component::Homopolymer
+Homopolymer	component.hpp	/^  class Homopolymer : public Component {$/;"	c	namespace:component
+INCLUDE	makefile	/^INCLUDE = -I\/usr\/local\/include$/;"	m
+INPUT_HPP	input.hpp	/^#define INPUT_HPP$/;"	d
+Input_Reader	input.hpp	/^    Input_Reader() :$/;"	f	class:input::Input_Reader
+Input_Reader	input.hpp	/^  class Input_Reader {$/;"	c	namespace:input
+LDFLAGS	makefile	/^LDFLAGS = -lm -lfftw3_mpi -lfftw3 -L\/usr\/local\/lib$/;"	m
+Lx	system.hpp	/^  double *Lx;$/;"	m	class:System
+M	system.hpp	/^  int M, ML;$/;"	m	class:System
+MAIN_HPP	main.hpp	/^#define MAIN_HPP$/;"	d
+ML	system.hpp	/^  int M, ML;$/;"	m	class:System
+N	component.hpp	/^    int N;$/;"	m	class:component::Homopolymer
+NEUTRAL	component.hpp	/^  enum Species_Type { NEUTRAL, A_TYPE, B_TYPE, C_TYPE, D_TYPE };$/;"	e	enum:component::Species_Type
+Nx	system.hpp	/^  int *Nx, *NxL;$/;"	m	class:System
+NxL	system.hpp	/^  int *Nx, *NxL;$/;"	m	class:System
+RANK	main.cpp	/^int RANK;$/;"	v
+SERIES_HPP	series.hpp	/^#define SERIES_HPP$/;"	d
+SRCS	makefile	/^SRCS = main.cpp input.cpp utils.cpp series.cpp system.cpp fftw_utils.cpp \\$/;"	m
+SYSTEM_HPP	system.hpp	/^#define SYSTEM_HPP$/;"	d
+Series	series.hpp	/^class Series {$/;"	c
+Single_System	series.hpp	/^  Single_System(input::Input_Reader *ir) { init(ir); };$/;"	f	class:Single_System
+Single_System	series.hpp	/^class Single_System : public Series {$/;"	c
+Species	component.hpp	/^    Species(Species_Type type) :$/;"	f	struct:component::Species
+Species	component.hpp	/^  struct Species {$/;"	s	namespace:component
+Species_Type	component.hpp	/^  enum Species_Type { NEUTRAL, A_TYPE, B_TYPE, C_TYPE, D_TYPE };$/;"	g	namespace:component
+System	system.cpp	/^System::System(input::Input_Reader *ir) {$/;"	f	class:System
+System	system.hpp	/^class System {$/;"	c
+TARGET	makefile	/^TARGET = a.out$/;"	m
+UTILS_HPP	utils.hpp	/^#define UTILS_HPP$/;"	d
+V	system.hpp	/^  double V;$/;"	m	class:System
+alloc_wrapper	fftw_utils.cpp	/^void FFTW_Utils::alloc_wrapper(std::complex<double> **array) {$/;"	f	class:FFTW_Utils
+alloc_wrapper_fftw_complex	fftw_utils.cpp	/^void FFTW_Utils::alloc_wrapper_fftw_complex(fftw_complex **array) {$/;"	f	class:FFTW_Utils
+allocate_arrays	component.cpp	/^void component::Species::allocate_arrays(FFTW_Utils *fftw_utils) {$/;"	f	class:component::Species
+bck_plan	fftw_utils.hpp	/^  fftw_plan fwd_plan, bck_plan;$/;"	m	class:FFTW_Utils
+calc_density	component.hpp	/^    void calc_density(FFTW_Utils *fftw_utils) {$/;"	f	class:component::Homopolymer
+check_inputs	input.cpp	/^void input::Input_Reader::check_inputs() {$/;"	f	class:input::Input_Reader
+component	component.hpp	/^namespace component {$/;"	n
+component_struct	input.hpp	/^    input::component_struct_t component_struct;$/;"	m	class:input::Input_Reader
+component_struct_t	input.hpp	/^    component_struct_t(input::Input_Reader *_container) :$/;"	f	struct:input::component_struct_t
+component_struct_t	input.hpp	/^  struct component_struct_t : public flag_struct_t {$/;"	s	namespace:input
+components_list	input.hpp	/^    std::vector<flag_struct_t*> components_list;$/;"	m	struct:input::component_struct_t
+container	input.hpp	/^    input::Input_Reader *container;$/;"	m	struct:input::flag_struct_t
+die	utils.cpp	/^void utils::die() {$/;"	f	class:utils
+die	utils.cpp	/^void utils::die(std::string message) {$/;"	f	class:utils
+dim_struct	input.hpp	/^    input::vector_struct_t<int> dim_struct;$/;"	m	class:input::Input_Reader
+dx	system.hpp	/^  double *dx;$/;"	m	class:System
+energy_freq	system.hpp	/^  int energy_freq;$/;"	m	class:System
+energy_outputs	system.cpp	/^void System::energy_outputs() {$/;"	f	class:System
+energy_struct	input.hpp	/^    input::vector_struct_t<int> energy_struct;$/;"	m	struct:input::output_freq_struct_t
+fft_bck_wrapper	fftw_utils.cpp	/^void FFTW_Utils::fft_bck_wrapper(std::complex<double> *in,$/;"	f	class:FFTW_Utils
+fft_fwd_wrapper	fftw_utils.cpp	/^void FFTW_Utils::fft_fwd_wrapper(std::complex<double> *in,$/;"	f	class:FFTW_Utils
+fftw_utils	system.hpp	/^  FFTW_Utils *fftw_utils;$/;"	m	class:System
+flag	input.hpp	/^    std::string flag;$/;"	m	struct:input::flag_struct_t
+flag_struct_t	input.hpp	/^    flag_struct_t(input::Input_Reader *_container, std::string _flag) :$/;"	f	struct:input::flag_struct_t
+flag_struct_t	input.hpp	/^  struct flag_struct_t {$/;"	s	namespace:input
+fwd_plan	fftw_utils.hpp	/^  fftw_plan fwd_plan, bck_plan;$/;"	m	class:FFTW_Utils
+grid_freq	system.hpp	/^  int grid_freq;$/;"	m	class:System
+grid_outputs	system.cpp	/^void System::grid_outputs() {$/;"	f	class:System
+grid_struct	input.hpp	/^    input::vector_struct_t<int> grid_struct;$/;"	m	struct:input::output_freq_struct_t
+homopoly_struct_t	input.hpp	/^    homopoly_struct_t(input::Input_Reader *_container) :$/;"	f	struct:input::homopoly_struct_t
+homopoly_struct_t	input.hpp	/^  struct homopoly_struct_t : public flag_struct_t {$/;"	s	namespace:input
+in_array	fftw_utils.hpp	/^  fftw_complex *in_array, *out_array;$/;"	m	class:FFTW_Utils
+init	fftw_utils.cpp	/^void FFTW_Utils::init(input::Input_Reader *ir) {$/;"	f	class:FFTW_Utils
+init	series.cpp	/^void Single_System::init(input::Input_Reader *ir) {$/;"	f	class:Single_System
+init	series.hpp	/^  virtual void init(input::Input_Reader *ir) { };$/;"	f	class:Series
+input	fftw_utils.hpp	/^namespace input {$/;"	n
+input	input.hpp	/^namespace input {$/;"	n
+iter	system.hpp	/^  int iter;$/;"	m	class:System
+lx_struct	input.hpp	/^    input::vector_struct_t<double> lx_struct;$/;"	m	class:input::Input_Reader
+main	main.cpp	/^int main(int argc, const char *argv[])$/;"	f
+main	test.cpp	/^int main(int argc, const char *argv[])$/;"	f
+max_iter	system.hpp	/^  int max_iter;$/;"	m	class:System
+max_iter_struct	input.hpp	/^    input::vector_struct_t<int> max_iter_struct;$/;"	m	class:input::Input_Reader
+memory_alloced	fftw_utils.hpp	/^  long long memory_alloced;$/;"	m	class:FFTW_Utils
+n	component.hpp	/^    double n;$/;"	m	class:component::Component
+n_struct	input.hpp	/^    input::vector_struct_t<int> n_struct;$/;"	m	struct:input::homopoly_struct_t
+nx_struct	input.hpp	/^    input::vector_struct_t<int> nx_struct;$/;"	m	class:input::Input_Reader
+out_array	fftw_utils.hpp	/^  fftw_complex *in_array, *out_array;$/;"	m	class:FFTW_Utils
+output_freq_struct	input.hpp	/^    input::output_freq_struct_t output_freq_struct;$/;"	m	class:input::Input_Reader
+output_freq_struct_t	input.hpp	/^    output_freq_struct_t(input::Input_Reader *_container) :$/;"	f	struct:input::output_freq_struct_t
+output_freq_struct_t	input.hpp	/^  struct output_freq_struct_t : public flag_struct_t {$/;"	s	namespace:input
+phi	component.hpp	/^    double phi;$/;"	m	class:component::Component
+phi_struct	input.hpp	/^    input::vector_struct_t<double> phi_struct;$/;"	m	struct:input::homopoly_struct_t
+read	input.cpp	/^void input::component_struct_t::read(std::istringstream& iss, int num_vals) {$/;"	f	class:input::component_struct_t
+read	input.cpp	/^void input::homopoly_struct_t::read(std::istringstream& iss, int num_vals) {$/;"	f	class:input::homopoly_struct_t
+read	input.cpp	/^void input::output_freq_struct_t::read(std::istringstream& iss, int num_vals) {$/;"	f	class:input::output_freq_struct_t
+read	input.cpp	/^void input::series_struct_t::read(std::istringstream& iss, int num_vals) {$/;"	f	class:input::series_struct_t
+read	input.hpp	/^    void read(std::istringstream& iss) { read(iss, 1); };$/;"	f	struct:input::component_struct_t
+read	input.hpp	/^    void read(std::istringstream& iss) { read(iss, 1); };$/;"	f	struct:input::homopoly_struct_t
+read	input.hpp	/^    void read(std::istringstream& iss) { read(iss, 1); };$/;"	f	struct:input::output_freq_struct_t
+read	input.hpp	/^    void read(std::istringstream& iss) { read(iss, 1); };$/;"	f	struct:input::series_struct_t
+read	input.hpp	/^    void read(std::istringstream& iss) { read(iss, 1); };$/;"	f	struct:input::vector_struct_t
+read	input.hpp	/^    void read(std::istringstream& iss, int num_vals) {$/;"	f	struct:input::vector_struct_t
+read_input	input.cpp	/^void input::Input_Reader::read_input(std::string input_file_name) {$/;"	f	class:input::Input_Reader
+rho	component.hpp	/^    std::complex<double> *rho;$/;"	m	struct:component::Species
+rho_avg	component.hpp	/^    std::complex<double> *rho_avg;$/;"	m	struct:component::Species
+rho_hat	component.hpp	/^    std::complex<double> *rho_hat;$/;"	m	struct:component::Species
+run	series.hpp	/^  void run() {$/;"	f	class:Single_System
+series_struct	input.hpp	/^    input::series_struct_t series_struct;$/;"	m	class:input::Input_Reader
+series_struct_t	input.hpp	/^    series_struct_t(input::Input_Reader *_container) :$/;"	f	struct:input::series_struct_t
+series_struct_t	input.hpp	/^  struct series_struct_t : public flag_struct_t {$/;"	s	namespace:input
+simulate	system.cpp	/^void System::simulate() {$/;"	f	class:System
+species_list	component.hpp	/^    std::vector<Species*> species_list;$/;"	m	class:component::Component
+species_struct	input.hpp	/^    input::vector_struct_t<std::string> species_struct;$/;"	m	struct:input::homopoly_struct_t
+species_type	component.hpp	/^    Species_Type species_type;$/;"	m	struct:component::Species
+sub_flag	input.hpp	/^    std::string sub_flag;$/;"	m	struct:input::series_struct_t
+system	fftw_utils.hpp	/^  System *system;$/;"	m	class:FFTW_Utils
+system	series.hpp	/^  System *system;$/;"	m	class:Series
+to_lower	utils.cpp	/^std::string utils::to_lower(std::string str) {$/;"	f	class:utils
+to_species_type	component.hpp	/^  inline Species_Type to_species_type(std::string str) {$/;"	f	namespace:component
+utils	utils.hpp	/^namespace utils {$/;"	n
+values	input.hpp	/^    std::vector<T> values;$/;"	m	struct:input::vector_struct_t
+vector_struct_t	input.hpp	/^    vector_struct_t(input::Input_Reader *_container, std::string _flag) :$/;"	f	struct:input::vector_struct_t
+vector_struct_t	input.hpp	/^  struct vector_struct_t : public flag_struct_t {$/;"	s	namespace:input
+was_read	input.hpp	/^    bool was_read;$/;"	m	struct:input::flag_struct_t
+z_start	fftw_utils.hpp	/^  int z_start;$/;"	m	class:FFTW_Utils
+~FFTW_Utils	fftw_utils.cpp	/^FFTW_Utils::~FFTW_Utils() {$/;"	f	class:FFTW_Utils
+~Species	component.cpp	/^component::Species::~Species() {$/;"	f	class:component::Species
+~System	system.cpp	/^System::~System() {$/;"	f	class:System

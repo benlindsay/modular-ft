@@ -19,17 +19,17 @@ void FFTW_Utils::init(input::Input_Reader *ir) {
   ptrdiff_t dim_tmp = DIM;
   // ptrdiff_t Nx_rev[DIM];
   int Nx_rev[DIM];
+  // Fill reverse Nx array because we'll be slicing in z-direction
+  // instead of the x-direction
+  for (int i = 0; i < DIM; i++) {
+    Nx_rev[i] = Nx[DIM - i - 1];
+  }
 
 #ifdef MPI
   // Number of points in local array in the DIM-1 direction
   // and the index in the DIM-1 direction at which the local
   // array starts
   ptrdiff_t Nz_local, z_local_0;
-  // Fill reverse Nx array because we'll be slicing in z-direction
-  // instead of the x-direction
-  for (int i = 0; i < DIM; i++) {
-    Nx_rev[i] = Nx[DIM - i - 1];
-  }
 
   // Get the local array length, filling the Nz_local and z_local_0 variables
   // along the way. Those represent the number of points in the DIM-1 direction
@@ -51,7 +51,7 @@ void FFTW_Utils::init(input::Input_Reader *ir) {
   fwd_plan = fftw_mpi_plan_dft(DIM, Nx_rev, in_array, out_array,
                                MPI_COMM_WORLD, FFTW_FORWARD, FFTW_MEASURE);
   bck_plan = fftw_mpi_plan_dft(DIM, Nx_rev, in_array, out_array,
-                               MPI_COMM_WORLD, FFTW_FORWARD, FFTW_MEASURE);
+                               MPI_COMM_WORLD, FFTW_BACKWARD, FFTW_MEASURE);
 #else
   // If not using MPI, the local array length equals the global array length
   ML = M;

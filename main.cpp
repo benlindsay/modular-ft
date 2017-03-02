@@ -4,12 +4,19 @@
 
 #include "main.hpp"
 
-int RANK;
-int DIM;
-std::complex<double> I(0.0, 1.0);
+int main(int argc, const char *argv[]) {
 
-int main(int argc, const char *argv[])
-{
+#ifdef MPI
+  // MPI initialization stuff
+  MPI_Init( &argc , &argv );
+  MPI_Comm_rank( MPI_COMM_WORLD, &RANK);
+  MPI_Comm_size( MPI_COMM_WORLD, &NPROCS);
+  fftw_mpi_init();
+#else
+  RANK = 0;
+  NPROCS = 1;
+#endif
+
   std::string input_file_name;
   if (argc < 2) {
     // If input file wasn't passed as command line argument,
@@ -64,5 +71,10 @@ int main(int argc, const char *argv[])
     std::cout << casted_comp->n_struct.values[0] << std::endl;
     std::cout << casted_comp->phi_struct.values[0] << std::endl;
   }
+
+#ifdef MPI
+  MPI_Finalize();
+#endif
+
   return 0;
 }

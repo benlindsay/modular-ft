@@ -52,7 +52,7 @@ namespace component {
 
   class Homopolymer : public Component {
    public:
-    Homopolymer(Species_Type species_type, int _N) : N(_N) {
+    Homopolymer(Species_Type species_type, int N) : N(N) {
       std::cout << "adding homopoly species " << species_type << std::endl;
       species_list.push_back(new Species(species_type));
     };

@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <complex>
+#include "globals.hpp"
 #include "utils.hpp"
 #include "input.hpp"
 #include "series.hpp"

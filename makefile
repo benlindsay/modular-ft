@@ -8,7 +8,7 @@ LDFLAGS = -lm -lfftw3_mpi -lfftw3 -L$(FFTWHOME)/lib
 # LDFLAGS = -lm -lfftw3_mpi -lfftw3 -L/usr/local/lib
 
 SRCS = main.cpp input.cpp utils.cpp series.cpp system.cpp fftw_utils.cpp \
-       component.cpp
+       component.cpp array_utils.cpp
 
 TARGET = a.out
 

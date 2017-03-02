@@ -9,6 +9,7 @@
 #include <iostream>
 #include "globals.hpp"
 #include "input.hpp"
+#include "system.hpp"
 
 #ifdef MPI
 #include "mpi.h"
@@ -38,11 +39,8 @@ class FFTW_Utils {
 
   long long memory_alloced;
   System *system;
-  int z_start;
   fftw_plan fwd_plan, bck_plan;
   fftw_complex *in_array, *out_array;
 };
-
-#include "system.hpp"
 
 #endif // FFTW_UTILS_HPP

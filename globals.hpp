@@ -5,15 +5,19 @@
 #ifndef GLOBALS_HPP
 #define GLOBALS_HPP
 
-// These globals are declared in main.cpp, so don't redeclare them
-#ifndef MAIN_HPP
-
 #include <complex>
 
-extern int DIM, RANK;
+#ifndef MAIN_HPP
+extern
+#endif
+int DIM, RANK, NPROCS;
+
+#ifdef MAIN_HPP
+std::complex<double> I(0.0, 1.0);
+#else
 extern std::complex<double> I;
+#endif
 
-
-#endif // MAIN_HPP
+#define PI 3.14159265358979323846263383
 
 #endif // GLOBALS_HPP

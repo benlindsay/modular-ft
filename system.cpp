@@ -9,6 +9,7 @@ System::System(input::Input_Reader *ir) {
   Nx = new int[DIM];
   NxL = new int[DIM];
   dx = new double[DIM];
+  z_local_0 = 0;
   V = 1.0;
   M = 1;
   for (int i = 0; i < DIM; i++) {

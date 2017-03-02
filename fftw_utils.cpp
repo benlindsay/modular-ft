@@ -38,6 +38,7 @@ void FFTW_Utils::init(input::Input_Reader *ir) {
   ML = fftw_mpi_local_size_many(dim_tmp, Nx_rev, 1, 0,
                                 MPI_COMM_WORLD, &Nz_local, &z_local_0);
   system->ML = ML;
+  system->z_local_0 = z_local_0;
 
   // Fill the local Nx array (NxL), which is the same as Nx except in the DIM-1
   // direction
@@ -56,6 +57,7 @@ void FFTW_Utils::init(input::Input_Reader *ir) {
   // If not using MPI, the local array length equals the global array length
   ML = M;
   system->ML = ML;
+  system->z_local_0 = 0;
   for (int i = 0; i < DIM; i++) {
     NxL[i] = Nx[i];
   }
@@ -118,43 +120,33 @@ void FFTW_Utils::alloc_wrapper_fftw_complex(fftw_complex **array) {
 // Forward transform
 void FFTW_Utils::fft_fwd_wrapper(std::complex<double> *in,
                                  std::complex<double> *out) {
-
   int ML = system->ML;
   // Store fft input
   for (int i = 0; i < ML; i++) {
     in_array[i][0] = real(in[i]);
     in_array[i][1] = imag(in[i]);
   }
-
   fftw_execute(fwd_plan);
-
   double norm = 1.0 / double(system->M);
-
   // Pass result to output array
   for (int i = 0; i < ML; i++) {
     out[i] = ( out_array[i][0] + I * in_array[i][1] ) * norm ;
   }
-
 }
 
 // Backward transform
 void FFTW_Utils::fft_bck_wrapper(std::complex<double> *in,
                                  std::complex<double> *out) {
-
   int ML = system->ML;
   // Store fft input
   for (int i = 0; i < ML; i++) {
     in_array[i][0] = real(in[i]);
     in_array[i][1] = imag(in[i]);
   }
-
   fftw_execute(fwd_plan);
-
   double norm = 1.0 / double(system->M);
-
   // Pass result to output array
   for (int i = 0; i < ML; i++) {
     out[i] = ( out_array[i][0] + I * in_array[i][1] ) * norm ;
   }
-
 }
